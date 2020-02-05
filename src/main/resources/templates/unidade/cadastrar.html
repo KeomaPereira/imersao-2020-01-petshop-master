@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PetShop - Cadastrar Unidade</title>
+</head>
+<body>
+    <h1>Cadastro de Unidade</h1>
+    <form method="post" th:action="@{/admin/unidade/salvar}">
+        <span>Nome: </span>
+        <input name="nome"><br>
+
+        <span>Endereço: </span>
+        <input name="endereco"><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+</body>
+</html>
