@@ -1,5 +1,6 @@
 package br.com.tt.petshop.controller;
 
+import br.com.tt.petshop.api.exception.ClienteException;
 import br.com.tt.petshop.model.Cliente;
 import br.com.tt.petshop.service.ClienteService;
 import org.springframework.stereotype.Controller;
@@ -31,7 +32,7 @@ public class ClienteController {
     }
 
     @RequestMapping("/admin/cliente/salvar")
-    public String salvar(Cliente cliente, Model model){
+    public String salvar(Cliente cliente, Model model) throws ClienteException {
         this.clienteService.criar(cliente);
         return "redirect:/admin";
     }
