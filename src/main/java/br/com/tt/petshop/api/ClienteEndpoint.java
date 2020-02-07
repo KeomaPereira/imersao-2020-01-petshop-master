@@ -37,15 +37,13 @@ class ClienteEndpoint {
 //    }
 
     @PostMapping("/clientes")
-    public ResponseEntity criar(@RequestBody Cliente cliente){
+    public ResponseEntity criar(@RequestBody Cliente cliente) throws ClienteException {
         Cliente clienteSalvo = null;
-        try {
+
             clienteSalvo = clienteService.criar(cliente);
-        } catch (ClienteException e) {
-            return ResponseEntity
-                    .status(HttpStatus.UNPROCESSABLE_ENTITY)
-                    .body(e.getMessage());
-        }
+
+
+
         URI uri = URI.create("/clientes/"+ clienteSalvo.getId());
         //clienteService.criar(cliente);
         return ResponseEntity.created(uri).build();
