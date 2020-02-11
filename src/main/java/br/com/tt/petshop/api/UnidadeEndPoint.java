@@ -1,7 +1,6 @@
 package br.com.tt.petshop.api;
 import br.com.tt.petshop.model.Unidade;
 import br.com.tt.petshop.service.UnidadeService;
-import jdk.jfr.internal.Repository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.web.bind.annotation.*;
 
