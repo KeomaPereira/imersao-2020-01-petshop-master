@@ -22,7 +22,8 @@ public class AnimalOutDto {
         id = a.getId();
         nome = a.getNome();
         nascimento = a.getNascimento();
-        clienteNome = a.getCliente().getNome();
+        if ( a.getCliente() != null) {
+            clienteNome = a.getCliente().getNome();}
     }
 
     public void setId(long id) {

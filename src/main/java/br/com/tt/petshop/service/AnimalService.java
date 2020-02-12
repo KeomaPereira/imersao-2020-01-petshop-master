@@ -27,4 +27,8 @@ public class AnimalService {
     public Optional<Animal> findById(Long id) {
         return animalRepository.findById(id);
     }
+
+    public List<Animal> buscarTodos(){
+        return this.animalRepository.findAll();
+    }
 }
