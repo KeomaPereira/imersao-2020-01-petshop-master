@@ -58,4 +58,20 @@ public class Produto {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public LocalDate getCriacao() {
+        return criacao;
+    }
+
+    public void setCriacao(LocalDate criacao) {
+        this.criacao = criacao;
+    }
+
+    public LocalDate getAlteracao() {
+        return alteracao;
+    }
+
+    public void setAlteracao(LocalDate alteracao) {
+        this.alteracao = alteracao;
+    }
 }

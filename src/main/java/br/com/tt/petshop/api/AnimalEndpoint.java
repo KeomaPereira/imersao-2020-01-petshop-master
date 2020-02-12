@@ -52,14 +52,6 @@ public class AnimalEndpoint {
 
     @GetMapping
     public ResponseEntity  <List<AnimalOutDto>>  findAll(){
-
-//        List<Animal> listaAnimais = animalService.buscarTodos();
-//        List<AnimalOutDto> listaDto = new ArrayList<AnimalOutDto>();
-//        for (Animal animal: listaAnimais) {
-//            new AnimalOutDto(animal);
-//        }
-//        return null;
-
         return ResponseEntity.ok(animalService
                 .buscarTodos().stream()
                 .map(AnimalOutDto::new)
