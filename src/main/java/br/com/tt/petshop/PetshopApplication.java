@@ -10,4 +10,9 @@ public class PetshopApplication {
 		SpringApplication.run(PetshopApplication.class, args);
 	}
 
+//USAR O H2
+//URL: http://localhost:8080/h2-console/
+//JDBC URL: dbc:h2:mem:testdb
+//VM options na configuração do debug: -Dspring.profiles.active=local
+
 }
